@@ -1,0 +1,316 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 80px; /* For fixed navbar offset */
+}
+
+/* Header Section Styling */
+.header-section {
+    position: relative; /* Ensure overlay is positioned relative to the section */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0; /* Increase padding for a more spacious header */
+    text-align: center;
+    color: #fff; /* Light text color to contrast against the background */
+}
+
+/* Overlay to darken the background */
+.header-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly stronger overlay for better contrast */
+    z-index: 1;
+}
+
+/* Header Title Styling */
+.header-section h1 {
+    font-size: 3.5rem; /* Increase font size for a more prominent title */
+    font-weight: 700; /* Make title bold */
+    letter-spacing: 2px; /* Add spacing between letters for a more stylish effect */
+    text-transform: uppercase; /* Capitalize the title for a more formal appearance */
+    margin-bottom: 20px; /* Space below the title */
+    z-index: 2; /* Ensure text is above overlay */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow to make text stand out */
+}
+
+/* Subheading Styling */
+.header-section p {
+    font-size: 1.25rem; /* Slightly larger subheading */
+    font-weight: 300; /* Lighter weight for a more elegant look */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-top: 0;
+    margin-bottom: 30px; /* Space below the paragraph */
+    z-index: 2; /* Ensure text is above overlay */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for contrast */
+}
+
+/* Call-to-Action Button Styling */
+.header-section .cta-button {
+    background-color: #007bff; /* Blue button to draw attention */
+    color: #fff; /* White text on the button */
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 50px; /* Rounded edges for a modern look */
+    text-transform: uppercase; /* Capitalized text for button */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Ensure button is above overlay */
+    
+}
+
+.header-section .cta-button:hover {
+    background-color: #0056b3; /* Darken button color on hover */
+    transform: translateY(-5px); /* Slightly lift the button on hover */
+}
+
+/* Center the content vertically as well */
+.header-section .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* About Us and Booking Sections */
+section {
+    padding: 50px 0;
+    color: rgb(243, 7, 62);
+    background-color: whitesmoke;
+    border: 1px solid #ddd; /* Box Border */
+    border-radius: 10px; /* Box Border Radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+    margin: 20px 0; /* Space between sections */
+    background-color: #f5f5f5;
+}
+
+/* Specific Section Styles */
+#about-us {
+    background-color: whitesmoke;
+    border-color: #1d9b61;
+}
+#query-us {
+    background-color: whitesmoke;
+    border-color: #1d9b61;
+}
+
+p {
+    color: blue;
+}
+h2{
+    color: #f44336;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #495057;
+}
+
+/* Seat Layout Styling */
+.seat-layout-section {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    border-color: #1d9b61;
+}
+
+.seat-layout {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+.seat {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #c719e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seat.available {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.seat.booked {
+    background-color: #f44336;
+    color: white;
+    
+}
+#seat-layout-section{
+    background-color: whitesmoke;
+    border-color: #1d9b61;
+}
+/* Form Styling */
+form .form-control {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form .btn {
+    border-radius: 5px;
+    padding: 12px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .seat-layout {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    section {
+        padding: 30px 0; /* Reduced padding for smaller screens */
+    }
+}
+
+/* Contact Us Section Styling */
+#contact-us {
+    background-color: #f8f9fa; /* Light background color for the section */
+    padding: 50px 0;
+    text-align: center;
+    border-color: #1d9b61;
+}
+
+#contact-us .container {
+    max-width: 800px; /* Center the content and limit the width */
+    margin: 0 auto;
+    
+}
+
+#contact-us .card {
+    background-color: #fff;
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 40px;
+   
+}
+
+#contact-us h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+#query-us h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+
+#seat-layout h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+#book-seats h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+
+#welcome h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+
+#contact-us .form-label {
+    font-size: 1.1rem; /* Slightly larger font for labels */
+    font-weight: bold;
+    display: 5;
+    color: #be1757; /* Dark grey for text */
+    
+}
+
+#contact-us .form-label u {
+    text-decoration: underline;
+}
+
+#contact-us i {
+    font-style: italic;
+    color: #136bb8; /* Lighter color for the italicized text */
+}
+
+#contact-us .mb-3 {
+    margin-bottom: 20px; /* Space between form fields */
+}
+
+#contact-us .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da; /* Light border for form fields */
+    padding: 12px;
+    font-size: 1rem;
+    color: #0e4d8b; /* Dark text color */
+    margin-top: 8px;
+    width: 100%;
+    
+}
+
+#contact-us form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-us form .form-group {
+    margin-bottom: 20px;
+}
+
+/* Make it responsive on smaller screens */
+@media (max-width: 768px) {
+    #contact-us h2 {
+        font-size: 1.5rem; /* Smaller font for heading on smaller screens */
+    }
+    
+    #contact-us .card {
+        padding: 30px; /* Less padding for smaller screens */
+    }
+    
+    #contact-us .form-label {
+        font-size: 1rem; /* Adjust font size of labels for smaller screens */
+    }
+    
+    #contact-us .form-control {
+        font-size: 0.9rem; /* Smaller font size for form fields */
+    }
+}
